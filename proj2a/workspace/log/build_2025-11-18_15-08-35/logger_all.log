@@ -1,0 +1,213 @@
+[0.083s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.083s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='sequential', event_handlers=None, base_paths=['.'], paths=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=CustomArgumentParser(prog='colcon build', usage=None, description='Build a set of packages.', formatter_class=<class 'colcon_core.command.CustomFormatter'>, conflict_handler='error', add_help=True), verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7934a25b0550>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7934a25b0550>>)
+[0.110s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.110s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.110s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.110s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/acct/halind/Documents/csce274/proj2a/workspace'
+[0.112s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.123s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.124s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.125s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extensions ['ignore', 'ignore_ament_install']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ignore'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ignore_ament_install'
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extensions ['ros']
+[0.127s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ros'
+[0.129s] DEBUG:colcon.colcon_core.package_identification:Package 'src/boustrophedon' with type 'ros.ament_python' and name 'boustrophedon'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.133s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.133s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_args' from command line to 'None'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_target' from command line to 'None'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_clean_cache' from command line to 'False'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_clean_first' from command line to 'False'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_force_configure' from command line to 'False'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'ament_cmake_args' from command line to 'None'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'catkin_cmake_args' from command line to 'None'
+[0.150s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.150s] DEBUG:colcon.colcon_core.verb:Building package 'boustrophedon' with the following arguments: {'ament_cmake_args': None, 'build_base': '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon', 'merge_install': False, 'path': '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon', 'symlink_install': True, 'test_result_base': None}
+[0.151s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.151s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'boustrophedon'
+[0.151s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon' with build type 'ament_python'
+[0.151s] Level 1:colcon.colcon_core.shell:create_environment_hook('boustrophedon', 'ament_prefix_path')
+[0.152s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.152s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/ament_prefix_path.dsv'
+[0.156s] INFO:colcon.colcon_core.shell:Creating environment hook '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/ament_prefix_path.sh'
+[0.159s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.345s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon'
+[0.345s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.824s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'boustrophedon' was interrupted
+[0.824s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'boustrophedon' again
+[0.868s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[0.869s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[0.869s] ERROR:colcon.colcon_core.executor:Exception in executor extension 'sequential': Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', '--help-commands'] to pass: Traceback (most recent call last):
+  File "/usr/lib/python3.10/pathlib.py", line 625, in __str__
+    return self._str
+AttributeError: 'PosixPath' object has no attribute '_str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon/setup.py", line 5, in <module>
+    setup(
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/__init__.py", line 107, in setup
+    return distutils.core.setup(**attrs)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/core.py", line 172, in setup
+    ok = dist.parse_command_line()
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 472, in parse_command_line
+    if self.handle_display_options(option_order):
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 1220, in handle_display_options
+    return _Distribution.handle_display_options(self, option_order)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 686, in handle_display_options
+    self.print_commands()
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 999, in print_commands
+    return _Distribution.print_commands(self)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 755, in print_commands
+    self.print_command_list(std_commands, "Standard commands", max_length)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 722, in print_command_list
+    klass = self.get_command_class(cmd)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 987, in get_command_class
+    eps = metadata.entry_points(group='distutils.commands', name=command)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1021, in entry_points
+    return SelectableGroups.load(eps).select(**params)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 459, in load
+    ordered = sorted(eps, key=by_group)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1019, in <genexpr>
+    dist.entry_points for dist in unique(distributions())
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 631, in entry_points
+    return EntryPoints._from_text_for(self.read_text('entry_points.txt'), self)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 927, in read_text
+    return self._path.joinpath(filename).read_text(encoding='utf-8')
+  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+  File "/usr/lib/python3.10/pathlib.py", line 632, in __fspath__
+    return str(self)
+  File "/usr/lib/python3.10/pathlib.py", line 627, in __str__
+    self._str = self._format_parsed_parts(self._drv, self._root,
+KeyboardInterrupt
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/sequential.py", line 50, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 636, in run_until_complete
+    self.run_forever()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 603, in run_forever
+    self._run_once()
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 1871, in _run_once
+    event_list = self._selector.select(timeout)
+  File "/usr/lib/python3.10/selectors.py", line 469, in select
+    fd_event_list = self._selector.poll(timeout, max_ev)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 342, in execute_jobs
+    rc = func(context.args, jobs, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/sequential.py", line 61, in execute
+    loop.run_until_complete(future)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__
+    rc = await self.task(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__
+    return await task_method(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build
+    return await extension.build(additional_hooks=additional_hooks)
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 96, in build
+    available_commands = await self._get_available_commands(
+  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 194, in _get_available_commands
+    output = await check_output(
+  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output
+    assert not rc, f'Expected {args} to pass: {stderr_data}'
+AssertionError: Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', '--help-commands'] to pass: Traceback (most recent call last):
+  File "/usr/lib/python3.10/pathlib.py", line 625, in __str__
+    return self._str
+AttributeError: 'PosixPath' object has no attribute '_str'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon/setup.py", line 5, in <module>
+    setup(
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/__init__.py", line 107, in setup
+    return distutils.core.setup(**attrs)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/core.py", line 172, in setup
+    ok = dist.parse_command_line()
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 472, in parse_command_line
+    if self.handle_display_options(option_order):
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 1220, in handle_display_options
+    return _Distribution.handle_display_options(self, option_order)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 686, in handle_display_options
+    self.print_commands()
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 999, in print_commands
+    return _Distribution.print_commands(self)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 755, in print_commands
+    self.print_command_list(std_commands, "Standard commands", max_length)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/_distutils/dist.py", line 722, in print_command_list
+    klass = self.get_command_class(cmd)
+  File "/usr/local/lib/python3.10/dist-packages/setuptools/dist.py", line 987, in get_command_class
+    eps = metadata.entry_points(group='distutils.commands', name=command)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1021, in entry_points
+    return SelectableGroups.load(eps).select(**params)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 459, in load
+    ordered = sorted(eps, key=by_group)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 1019, in <genexpr>
+    dist.entry_points for dist in unique(distributions())
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 631, in entry_points
+    return EntryPoints._from_text_for(self.read_text('entry_points.txt'), self)
+  File "/usr/lib/python3.10/importlib/metadata/__init__.py", line 927, in read_text
+    return self._path.joinpath(filename).read_text(encoding='utf-8')
+  File "/usr/lib/python3.10/pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "/usr/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+  File "/usr/lib/python3.10/pathlib.py", line 632, in __fspath__
+    return str(self)
+  File "/usr/lib/python3.10/pathlib.py", line 627, in __str__
+    self._str = self._format_parsed_parts(self._drv, self._root,
+KeyboardInterrupt
+
+
+[0.869s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.869s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.869s] INFO:colcon.colcon_core.shell:Creating prefix script '/acct/halind/Documents/csce274/proj2a/workspace/install/local_setup.sh'
+[0.873s] INFO:colcon.colcon_core.shell:Creating prefix util module '/acct/halind/Documents/csce274/proj2a/workspace/install/_local_setup_util_sh.py'
+[0.876s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/acct/halind/Documents/csce274/proj2a/workspace/install/setup.sh'

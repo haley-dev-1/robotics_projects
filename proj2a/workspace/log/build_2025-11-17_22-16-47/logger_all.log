@@ -1,0 +1,100 @@
+[0.134s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.134s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='sequential', event_handlers=None, base_paths=['.'], paths=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=CustomArgumentParser(prog='colcon build', usage=None, description='Build a set of packages.', formatter_class=<class 'colcon_core.command.CustomFormatter'>, conflict_handler='error', add_help=True), verb_extension=<colcon_core.verb.build.BuildVerb object at 0x70429bbbc5b0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x70429bbbc5b0>>)
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.195s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.195s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/acct/halind/Documents/csce274/proj2a/workspace'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.196s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.219s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.220s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.221s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.225s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.226s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extensions ['ignore', 'ignore_ament_install']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ignore'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ignore_ament_install'
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extensions ['ros']
+[0.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/boustrophedon) by extension 'ros'
+[0.234s] DEBUG:colcon.colcon_core.package_identification:Package 'src/boustrophedon' with type 'ros.ament_python' and name 'boustrophedon'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.284s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_target' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_clean_cache' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_clean_first' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'cmake_force_configure' from command line to 'False'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'ament_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'catkin_cmake_args' from command line to 'None'
+[0.285s] Level 5:colcon.colcon_core.verb:set package 'boustrophedon' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.285s] DEBUG:colcon.colcon_core.verb:Building package 'boustrophedon' with the following arguments: {'ament_cmake_args': None, 'build_base': '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon', 'merge_install': False, 'path': '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon', 'symlink_install': True, 'test_result_base': None}
+[0.285s] INFO:colcon.colcon_core.executor:Executing jobs using 'sequential' executor
+[0.289s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'boustrophedon'
+[0.289s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon' with build type 'ament_python'
+[0.289s] Level 1:colcon.colcon_core.shell:create_environment_hook('boustrophedon', 'ament_prefix_path')
+[0.291s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.291s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/ament_prefix_path.dsv'
+[0.301s] INFO:colcon.colcon_core.shell:Creating environment hook '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/ament_prefix_path.sh'
+[0.312s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.780s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/acct/halind/Documents/csce274/proj2a/workspace/src/boustrophedon'
+[0.780s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon': HISTTIMEFORMAT=%F %T: PYTHONPATH=/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/build --no-deps symlink_data
+[3.711s] Level 1:colcon.colcon_core.shell:create_environment_hook('boustrophedon', 'pythonpath_develop')
+[3.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/share/boustrophedon/hook/pythonpath_develop.dsv'
+[3.713s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon' returned '0': HISTTIMEFORMAT=%F %T: PYTHONPATH=/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/build --no-deps symlink_data
+[3.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/acct/halind/Documents/csce274/proj2a/workspace/build/boustrophedon/share/boustrophedon/hook/pythonpath_develop.sh'
+[3.738s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon' for CMake module files
+[3.744s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon' for CMake config files
+[3.750s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/lib'
+[3.751s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/bin'
+[3.751s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/lib/pkgconfig/boustrophedon.pc'
+[3.752s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/lib/python3.10/site-packages'
+[3.752s] Level 1:colcon.colcon_core.shell:create_environment_hook('boustrophedon', 'pythonpath')
+[3.752s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/pythonpath.dsv'
+[3.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/hook/pythonpath.sh'
+[3.765s] Level 1:colcon.colcon_core.environment:checking '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/bin'
+[3.765s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(boustrophedon)
+[3.766s] INFO:colcon.colcon_core.shell:Creating package descriptor '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/package.dsv'
+[3.774s] INFO:colcon.colcon_core.shell:Creating package script '/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/boustrophedon/package.sh'
+[3.781s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/acct/halind/Documents/csce274/proj2a/workspace/install/boustrophedon/share/colcon-core/packages/boustrophedon)
+[3.782s] DEBUG:colcon.colcon_core.executor.sequential:run_until_complete 'boustrophedon' finished with '0'
+[3.783s] DEBUG:colcon.colcon_core.executor.sequential:closing loop
+[3.783s] DEBUG:colcon.colcon_core.executor.sequential:loop closed
+[3.783s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.783s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.783s] INFO:colcon.colcon_core.shell:Creating prefix script '/acct/halind/Documents/csce274/proj2a/workspace/install/local_setup.sh'
+[3.786s] INFO:colcon.colcon_core.shell:Creating prefix util module '/acct/halind/Documents/csce274/proj2a/workspace/install/_local_setup_util_sh.py'
+[3.793s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/acct/halind/Documents/csce274/proj2a/workspace/install/setup.sh'
