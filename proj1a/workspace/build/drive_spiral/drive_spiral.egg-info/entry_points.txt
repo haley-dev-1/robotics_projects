@@ -1,0 +1,2 @@
+[console_scripts]
+main = drive_spiral.main:main

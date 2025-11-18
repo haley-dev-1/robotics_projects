@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>drive_spiral</name>
+  <version>0.0.0</version>
+  <description>
+    Group project: Drive Spiral behavior for iRobot Create 3.
+    Each group should update the maintainer field with their group number and names.
+  </description>
+
+  <!-- License -->
+  <license>Apache-2.0</license>
+
+  <!-- Maintainer: students replace TODO with group number & names -->
+  <maintainer email="TODO@example.com">TODO: Group N (names here)</maintainer>
+
+  <!-- Dependencies -->
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>irobot_create_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

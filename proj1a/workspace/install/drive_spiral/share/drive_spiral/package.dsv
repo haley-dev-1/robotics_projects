@@ -1,0 +1,6 @@
+source;share/drive_spiral/hook/pythonpath.dsv
+source;share/drive_spiral/hook/pythonpath.sh
+source;share/drive_spiral/hook/ament_prefix_path.dsv
+source;share/drive_spiral/hook/ament_prefix_path.sh
+source;../../build/drive_spiral/share/drive_spiral/hook/pythonpath_develop.dsv
+source;../../build/drive_spiral/share/drive_spiral/hook/pythonpath_develop.sh
