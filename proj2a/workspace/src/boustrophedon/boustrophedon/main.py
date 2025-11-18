@@ -28,7 +28,7 @@ class Controller(Node):
         self.ir_node = ir_node
 
         # now we are adding "stateful" machine, thus the original state is
-        # self.state = INITIALIZED     
+        self.state = INITIALIZED     
 
         # cmd publisher to drive robot when button presses are detected
         self.cmd_vel_pub = self.create_publisher(
@@ -36,10 +36,6 @@ class Controller(Node):
                 'cmd_vel',  # Topic to which its subscribers subscribe
                 10)         # message buffer (for network congestion)
         
-        '''self.timer = self.create_timer(
-                0.1,                    # run at 10Hz
-                self._publish_twist)    #  call to publisher above '''
-
         # Updated from original
         self.dt = 1.0 / float(pulse_htz)
         self.create_timer(self.dt, self._pulse) # fixed timing issue... this is what lets robot update.
@@ -51,20 +47,23 @@ class Controller(Node):
         self.spiral_scale = 1.0
         self.max_count = int(88 * self.spiral_scale)  # optional stop threshold
 
-	# debouncing ("filtering user input before triggering the action")
+	    # debouncing ("filtering user input before triggering the action")
         self.debounce_s = 0.25
         self.last_button_time = -1e8
-
-        '''
-        self.spiral = False
-        self.spi_dir = 0
-        self.spi_count = 0
-        '''
-
-        # Book-keeping
-        # self.demo_mode = demo_mode # useful when on robot
-        # self.get_logger().info(f"SpiralNode ready. demo_mode = {self.demo_mode}")
-
+        
+        # statefulness
+        self.bumped = False
+        self.wall_detect_ir = 40
+        self.aslign_epsilon = 10 #closeness in IR units
+        
+        self.wall_target_ir = 80 # desired right ir intensity
+        self.wall_kp = 0.002 # proportional gain
+        
+        # u-turn/return; we'll need to know this when the state changes
+        self.state_entry_pose = None # x,y, theta
+        
+        
+        
     # this is called on interface_buttons within ButtonNode
     def power_button_handler(self):
         # Updated from original
@@ -79,22 +78,17 @@ class Controller(Node):
             self.spiral = True # we want to spiral on init.
             self.spi_dir = 1.0
             self.spi_count=0
+            
+            self.state_entry_pose = self.odom_node.get_pose()
         else: # if not JUST Initialized, we have different handling... halt and reset to initilaized
             self.state = INITIALIZED
             self.spiral = False
             self.spi_count = 0 # we restarted
             self._stop() # kept stopped for now
             
-        ''' old
-        if not self.spiral:
-            self.spiral = True
-            self.spi_dur = 1.0
-            self.spi_count = 0
-        else:
-            self.spiral = False
-            self.spi_count = 0
+            self.bumped = False
             self._stop()
-        end of old; might conflict, i dont know? '''
+            
         
     def hazard_handler(self):
         # Updated from original
@@ -102,19 +96,45 @@ class Controller(Node):
         self.spiral = False # stop spiral active
         self._stop()
         
-        # TODO? I want to control states but I don't think it goes here.
+        # ----------------------------------------------------------------------
+        if self.state == SPIRAL_SEARCH:
+            self.state = ALIGN_WALL
+            self.spiral = False
+            self.spi_count = 0
+            self.state_entry_pose = self.odom_node.get_pose()
 
+        elif self.state == FOLLOW_WALL or self.state == MAKE_UTURN:
+            # For now: just back off slightly & let the state handler recover
+            self.get_logger().info("Bump during FOLLOW_WALL/MAKE_UTURN; will attempt recovery.")
+            # you can add backup motion here later if needed
+
+        elif self.state == RETURN:
+            self.get_logger().info("Bump during RETURN: resetting to INITIALIZED.")
+            self.state = INITIALIZED
+            self.spiral = False
+       # ------------------------------------------------------------------------
+
+        
     # Updated from original
     def _pulse(self):
         self._handle_odom()
+        readings = self.ir_node.get_readings() # grab readings
         self._handle_ir()
+        
         
         ''' stateful ''' 
         if self.state == INITIALIZED:
             self._stop()
         elif self.state == SPIRAL_SEARCH:
-            # self.spiral = True # start spiraling, allows _do_spiral to start
-            self._do_spiral()
+            self._state_spiral_search(readings) # takes readings from ir 
+        elif self.state == ALIGN_WALL:
+            self._state_align_wall(readings)
+        elif self.state == FOLLOW_WALL: 
+            self._state_follow_wall(readings)
+        elif self.state == MAKE_UTURN:
+            self._state_make_uturn()
+        elif self.state == RETURN:
+            self._state_return()
         else:
             pass # other states written here
         ''' end of stateful '''
@@ -125,13 +145,29 @@ class Controller(Node):
         else:
             self._stop() # stay stopped, we keep this published so it doesn't start up again
         '''
+    
+    def _state_spiral_search(self, readings):
+        # Continue spiral
+        self._do_spiral()
+
+        # Simple “found wall” test: if any front-ish sensor is bright enough
+        if readings:
+            # approximate front-ish indices (center-left-front, center, center-right-front)
+            front_vals = readings[2:5]
+            if any(v >= self.wall_detect_ir for v in front_vals):
+                self.get_logger().info("Wall detected during SPIRAL_SEARCH -> ALIGN_WALL")
+                self.state = ALIGN_WALL
+                self.spiral = False
+                self.spi_count = 0
+                self.state_entry_pose = self.odom_node.get_pose()
+
         
     # spiral motion
     def _do_spiral(self):
         
         # todo ...
         self.spi_count += 1 # counter for tracking
-        v = 0.03 + (self.spi_count * 0.0033)
+        v = 0.03 + (self.spi_count * 0.033)
         w = (0.66 + (0.185 * self.spiral_scale)) * self.spi_dir
 
         # sanity caps
