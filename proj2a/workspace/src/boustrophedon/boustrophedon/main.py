@@ -94,8 +94,9 @@ class Controller(Node):
         # Updated from original
         self.get_logger().info("Hazard Detected")
         self.spiral = False # stop spiral active
-        self._stop()
         
+        
+        # TODO: hazards depending on state
         # ----------------------------------------------------------------------
         if self.state == SPIRAL_SEARCH:
             self.state = ALIGN_WALL
@@ -112,6 +113,9 @@ class Controller(Node):
             self.get_logger().info("Bump during RETURN: resetting to INITIALIZED.")
             self.state = INITIALIZED
             self.spiral = False
+            
+        else:
+            self._stop()
        # ------------------------------------------------------------------------
 
         
@@ -123,12 +127,12 @@ class Controller(Node):
         
         
         ''' stateful ''' 
-        if self.state == INITIALIZED:
+        if self.state == INITIALIZED: # calls INITIALIZED
             self._stop()
-        elif self.state == SPIRAL_SEARCH:
+        elif self.state == SPIRAL_SEARCH: # calls SPIRAL_SEARCH
             self._state_spiral_search(readings) # takes readings from ir 
-        elif self.state == ALIGN_WALL:
-            self._state_align_wall(readings)
+        elif self.state == ALIGN_WALL: # 
+            self._state_align_wall(readings) 
         elif self.state == FOLLOW_WALL: 
             self._state_follow_wall(readings)
         elif self.state == MAKE_UTURN:
@@ -146,20 +150,19 @@ class Controller(Node):
             self._stop() # stay stopped, we keep this published so it doesn't start up again
         '''
     
+    # this is where we either continue spiral or if readings tell us there's a wall, we will end up transitioning to ALIGN_WALL 
     def _state_spiral_search(self, readings):
-        # Continue spiral
+        
+        # continue spiraling
         self._do_spiral()
 
+        # node order: [6,5,2,0,1,3,5]
         # Simple “found wall” test: if any front-ish sensor is bright enough
-        if readings:
-            # approximate front-ish indices (center-left-front, center, center-right-front)
-            front_vals = readings[2:5]
-            if any(v >= self.wall_detect_ir for v in front_vals):
-                self.get_logger().info("Wall detected during SPIRAL_SEARCH -> ALIGN_WALL")
-                self.state = ALIGN_WALL
-                self.spiral = False
-                self.spi_count = 0
-                self.state_entry_pose = self.odom_node.get_pose()
+        if readings is not None and min(readings) < self.wall_hit_threshold:
+            self.get_logger().info("Wall detected -> ALIGN_WALL")
+            self.state = ALIGN_WALL
+            self.spiral = False
+            self._stop()
 
         
     # spiral motion
